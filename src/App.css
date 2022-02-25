@@ -1,12 +1,18 @@
+.App {
+  background-color: var(--bg);
+  height: 100vh;
+}
+
 .header {
-  background-color: var(--light-mode-bg);
+  background-color: var(--bg);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.8rem 1rem;
-  border-bottom: 1px solid var(--light-mode-bg);
-  box-shadow: rgb(100 100 111 / 20%) 3px 0px 20px 2px;
+  border-bottom: 1px solid var(--bg);
+  box-shadow: var(--box-shadow1);
   margin-bottom: 2rem;
+  color: var(--text);
 }
 
 .header__title {
@@ -16,7 +22,7 @@
 
 .toggle-theme {
   border: none;
-  background: var(--light-mode-bg);
+  background: var(--bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,10 +31,13 @@
 .toggle-icon {
   width: 1rem;
   margin-right: .5rem;
+  color: var(--el-color);
 }
 
 .toggle-theme-text {
   font-weight: var(--font-wght-bold);
+  color: var(--text);
+  ;
 }
 
 .navigation {
@@ -36,7 +45,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding-left: 1rem;
-  background-color: var(--light-mode-bg);
+  background-color: var(--bg);
   padding-right: 1rem;
 }
 
@@ -55,7 +64,7 @@ option {
 
 .search-icon {
   position: absolute;
-  color: var(--light-mode-input);
+  color: var(--input);
   left: 14px;
   top: 12px;
   width: 1rem;
@@ -68,23 +77,18 @@ input[type="search"] {
   width: 100%;
   margin-bottom: 2rem;
   border: none;
-  box-shadow: rgb(149 157 165 / 20%) 0px 0px 12px 0px;
+  box-shadow: var(--box-shadow2);
   border-radius: var(--border-radius);
   position: relative;
   cursor: pointer;
+  background-color: var(--bg);
 }
 
-/* input[type="search"]::before {
-  content: '';
-  position: absolute;
-  background: url(./assets/search.svg) no-repeat;
-  background-position: left center;
-} */
 
 ::placeholder {
-  color: var(--light-mode-input);
+  color: var(--text);
   font-family: var(--ff);
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .select-parent {
@@ -99,6 +103,7 @@ input[type="search"] {
   position: absolute;
   top: 13px;
   right: 150px;
+  color: var(--text);
 }
 
 select {
@@ -109,10 +114,12 @@ select {
   -moz-appearance: none;
   appearance: none;
   width: 60%;
-  box-shadow: rgb(149 157 165 / 20%) 0px 0px 12px 0px;
+  box-shadow: var(--box-shadow2);
   border-radius: var(--border-radius);
   margin-bottom: 2rem;
   font-size: .8rem;
   opacity: 0.8;
   cursor: pointer;
+  background-color: var(--bg);
+  color: var(--text);
 }
