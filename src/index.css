@@ -6,9 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 87.5%;
-  font-family: 'Nunito Sans',
-    sans-serif;
-  ;
+  font-family: var(--ff);
 }
 
 code {
@@ -36,4 +34,8 @@ button {
   --font-wght-light: 300;
   --font-wght-bold: 600;
   --font-wght-extra-bold: 800;
+  --ff: 'Nunito Sans',
+    sans-serif;
+
+  --border-radius: 5px;
 }
