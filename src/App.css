@@ -48,15 +48,38 @@ option {
   font-weight: var(--font-wght-bold);
 }
 
+.search-parent {
+  width: 100%;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  color: var(--light-mode-input);
+  left: 14px;
+  top: 12px;
+  width: 1rem;
+}
+
 input[type="search"] {
   padding: 1rem;
+  padding-left: 3rem;
   font-weight: var(--font-wght-bold);
   width: 100%;
   margin-bottom: 2rem;
   border: none;
   box-shadow: rgb(149 157 165 / 20%) 0px 0px 12px 0px;
   border-radius: var(--border-radius);
+  position: relative;
+  cursor: pointer;
 }
+
+/* input[type="search"]::before {
+  content: '';
+  position: absolute;
+  background: url(./assets/search.svg) no-repeat;
+  background-position: left center;
+} */
 
 ::placeholder {
   color: var(--light-mode-input);
@@ -91,4 +114,5 @@ select {
   margin-bottom: 2rem;
   font-size: .8rem;
   opacity: 0.8;
+  cursor: pointer;
 }
