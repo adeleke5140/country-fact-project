@@ -1,27 +1,96 @@
+import { useState, useEffect } from "react"
+import axios from 'axios'
+
 function Header () {
   return (
-    <div className="header">
+    <header className="header">
       <h1 className="header__title">
         Where in the World
       </h1>
       <button className="toggle-theme">
         <span>dark Mode</span>
       </button>
+    </header>
+  )
+}
+
+function Nav () {
+  return (
+    <nav>
+      <label htmlFor="countries-filter">Filter by Country</label>
+      <select name="countries" id="countries-filter">
+        <option value="#">Filter by Region</option>
+        <option value="Africa">Africa</option>
+        <option value="America">America</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+    </nav>
+  )
+}
+
+function CountryList () {
+  return (
+    <main>
+      <CountryCard/>
+    </main>
+  )
+}
+
+function CountryCard () {
+  return (
+    <div>
+      <CountryImage />
+      <CountryInfo />
     </div>
   )
 }
 
+function CountryImage () {
+  return (
+    <img src="" alt="a flag of a country" />
+  )
+}
 
 
-
-
-
+function CountryInfo () {
+  return (
+    <div className="country-info">
+      <h2 className="country-name"></h2>
+      <p className="country-population"></p>
+      <p className="country-region"></p>
+      <p className="country-capital"></p>
+    </div>
+  )
+}
 
 function App () {
+  const [countries, setCountries] = useState([])
+  let isActive = true;
+
+  useEffect(() => {
+    async function getCountries () {
+      try {
+        const response = await axios.get("https://restcountries.com/v3.1/all")
+        const data = response.data
+        console.log(data)
+      } catch (error) {
+        console.error(error)
+        }
+    }
+    if (isActive) {
+      getCountries()
+    }
+
+    () => isActive = false;
+    }, [])
 
   return (
     <div className="App">
-      <Header/>
+      <Header />
+      <Nav />
+      <CountryList/>
     </div>
   )
 }
