@@ -5,9 +5,35 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 87.5%;
+  font-family: 'Nunito Sans',
+    sans-serif;
+  ;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+}
+
+:root {
+  --dark-mode-el-color: hsl(209, 23%, 22%);
+  --dark-mode-bg: hsl(207, 26%, 17%);
+  --dark--mode-text: hsl(0, 0%, 100%);
+
+  --light-mode-text: hsl(200, 15%, 8%);
+  --light-mode-input: hsl(0, 0%, 52%);
+  --light-mode-bg: hsl(0, 0%, 98%);
+  --light-mode-el-color: hsl(0, 0%, 100%);
+
+  --font-wght-light: 300;
+  --font-wght-bold: 600;
+  --font-wght-extra-bold: 800;
 }
