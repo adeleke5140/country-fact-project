@@ -1,0 +1,32 @@
+.header {
+  background-color: var(--light-mode-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8rem 1rem;
+  border-bottom: 1px solid var(--light-mode-bg);
+  box-shadow: rgb(100 100 111 / 20%) 3px 0px 20px 2px;
+  margin-bottom: 2rem;
+}
+
+.header__title {
+  font-size: .9rem;
+  font-weight: var(--font-wght-extra-bold);
+}
+
+.toggle-theme {
+  border: none;
+  background: var(--light-mode-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-icon {
+  width: 1rem;
+  margin-right: .5rem;
+}
+
+.toggle-theme-text {
+  font-weight: var(--font-wght-bold);
+}
