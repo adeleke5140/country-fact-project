@@ -19,7 +19,10 @@ function Header () {
 function Nav () {
   return (
     <nav className="navigation">
-      <input type="search" name="Search for a country" id="country-search" placeholder="Search for a country..."/>
+      <div className="search-parent">
+        <input type="search" name="Search for a country" id="country-search" placeholder="Search for a country..." />
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </div>
       <label htmlFor="countries-filter" id="country-filter">Filter by Country</label>
       <div className="select-parent">
         <select name="countries" id="countries-filter"> 
