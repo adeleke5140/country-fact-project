@@ -30,3 +30,65 @@
 .toggle-theme-text {
   font-weight: var(--font-wght-bold);
 }
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1rem;
+  background-color: var(--light-mode-bg);
+  padding-right: 1rem;
+}
+
+#country-filter {
+  display: none;
+}
+
+option {
+  font-weight: var(--font-wght-bold);
+}
+
+input[type="search"] {
+  padding: 1rem;
+  font-weight: var(--font-wght-bold);
+  width: 100%;
+  margin-bottom: 2rem;
+  border: none;
+  box-shadow: rgb(149 157 165 / 20%) 0px 0px 12px 0px;
+  border-radius: var(--border-radius);
+}
+
+::placeholder {
+  color: var(--light-mode-input);
+  font-family: var(--ff);
+  opacity: 0.5;
+}
+
+.select-parent {
+  width: 100%;
+  position: relative;
+}
+
+.select-parent::after {
+  content: url(./assets/arrow.svg);
+  font-size: 1rem;
+  width: .6rem;
+  position: absolute;
+  top: 13px;
+  right: 150px;
+}
+
+select {
+  font-weight: var(--font-wght-bold);
+  padding: 1rem 1rem;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 60%;
+  box-shadow: rgb(149 157 165 / 20%) 0px 0px 12px 0px;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  font-size: .8rem;
+  opacity: 0.8;
+}
