@@ -18,17 +18,19 @@ function Header () {
 
 function Nav () {
   return (
-    <nav>
+    <nav className="navigation">
       <input type="search" name="Search for a country" id="country-search" placeholder="Search for a country..."/>
-      <label htmlFor="countries-filter">Filter by Country</label>
-      <select name="countries" id="countries-filter">
-        <option value="#">Filter by Region</option>
-        <option value="Africa">Africa</option>
-        <option value="America">America</option>
-        <option value="Asia">Asia</option>
-        <option value="Europe">Europe</option>
-        <option value="Oceania">Oceania</option>
-      </select>
+      <label htmlFor="countries-filter" id="country-filter">Filter by Country</label>
+      <div className="select-parent">
+        <select name="countries" id="countries-filter"> 
+          <option value="">Filter by Region </option>
+          <option value="Africa">Africa</option>
+          <option value="America">America</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
+        </select>
+        </div>
     </nav>
   )
 }
