@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 87.5%;
   font-family: var(--ff);
+  color: var(--text);
 }
 
 code {
@@ -25,11 +26,16 @@ button {
   --dark-mode-el-color: hsl(209, 23%, 22%);
   --dark-mode-bg: hsl(207, 26%, 17%);
   --dark--mode-text: hsl(0, 0%, 100%);
+  --dark--bs--header: rgb(10 10 12 / 20%) 3px 0px 20px 2px;
+  --dark--bs--nav: rgb(0 0 0 / 16%) 3px 0px 7px 0px,
+    rgb(0 0 0 / 6%) 0px 0px 0px 1px;
 
   --light-mode-text: hsl(200, 15%, 8%);
   --light-mode-input: hsl(0, 0%, 52%);
   --light-mode-bg: hsl(0, 0%, 98%);
   --light-mode-el-color: hsl(0, 0%, 100%);
+  --light--bs--header: rgb(100 100 111 / 20%) 3px 0px 20px 2px;
+  --light--bs-nav: rgb(149 157 165 / 20%) 0px 0px 12px 0px rgb(149 157 165 / 20%) 0px 0px 12px 0px;
 
   --font-wght-light: 300;
   --font-wght-bold: 600;
@@ -38,4 +44,26 @@ button {
     sans-serif;
 
   --border-radius: 5px;
+}
+
+@media(prefers-color-scheme: dark) {
+  :root {
+    --text: var(--dark--mode-text);
+    --input: var(--light-mode-input);
+    --bg: var(--dark-mode-bg);
+    --el-color: var(--dark-mode-el-color);
+    --box-shadow1: var(--dark--bs--header);
+    --box-shadow2: var(--dark--bs--nav);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: var(--light-mode-text);
+    --input: var(--light-mode-input);
+    --bg: var(--light-mode-input);
+    --el-color: var(--light-mode-el-color);
+    --box-shadow1: var(--light--bs--header);
+    --box-shadow2: var(--light--bs-nav);
+  }
 }
