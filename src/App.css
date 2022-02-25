@@ -4,7 +4,7 @@
 }
 
 .header {
-  background-color: var(--bg);
+  background-color: var(--el-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,7 +22,7 @@
 
 .toggle-theme {
   border: none;
-  background: var(--bg);
+  background: var(--el-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +31,7 @@
 .toggle-icon {
   width: 1rem;
   margin-right: .5rem;
-  color: var(--el-color);
+  color: var(--text);
 }
 
 .toggle-theme-text {
@@ -81,14 +81,15 @@ input[type="search"] {
   border-radius: var(--border-radius);
   position: relative;
   cursor: pointer;
-  background-color: var(--bg);
+  background-color: var(--el-color);
+  color: var(--text);
 }
 
 
 ::placeholder {
   color: var(--text);
   font-family: var(--ff);
-  opacity: 0.8;
+  opacity: var(--opacity);
 }
 
 .select-parent {
@@ -118,8 +119,8 @@ select {
   border-radius: var(--border-radius);
   margin-bottom: 2rem;
   font-size: .8rem;
-  opacity: 0.8;
   cursor: pointer;
-  background-color: var(--bg);
+  background-color: var(--el-color);
   color: var(--text);
+  opacity: var(--opacity);
 }
