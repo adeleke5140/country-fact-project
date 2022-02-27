@@ -10,6 +10,7 @@ body {
   font-size: 87.5%;
   font-family: var(--ff);
   color: var(--text);
+  background-color: var(--bg);
 }
 
 code {
@@ -62,6 +63,7 @@ img {
     --box-shadow1: var(--dark--bs--header);
     --box-shadow2: var(--dark--bs--nav);
     --opacity: 1;
+    --arrow: url(./assets/arrow-dark.svg);
   }
 }
 
@@ -74,5 +76,8 @@ img {
     --box-shadow1: var(--light-bs-header);
     --box-shadow2: var(--light-bs-nav);
     --opacity: 0.5;
+    --arrow: url(./assets/arrow.svg);
   }
+
+
 }
