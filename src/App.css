@@ -123,4 +123,18 @@ select {
   background-color: var(--el-color);
   color: var(--text);
   opacity: var(--opacity);
+  opacity: 1;
+}
+
+
+.country-card {
+  border: 1px solid red;
+  margin: 0 auto;
+  width: 18rem;
+}
+
+.country-info {
+  border: 1px solid red;
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  background-color: var(--el-color);
 }
