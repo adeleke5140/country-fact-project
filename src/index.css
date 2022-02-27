@@ -24,6 +24,10 @@ button {
   font-family: inherit;
 }
 
+img {
+  max-width: 100%;
+}
+
 :root {
   --dark-mode-el-color: hsl(209, 23%, 22%);
   --dark-mode-bg: hsl(207, 26%, 17%);

@@ -1,6 +1,5 @@
 .App {
   background-color: var(--bg);
-  height: 100vh;
 }
 
 .header {
@@ -126,15 +125,33 @@ select {
   opacity: 1;
 }
 
+.country-card-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: var(--ff);
+  padding-left: 0;
+  list-style-type: none;
+}
 
 .country-card {
-  border: 1px solid red;
-  margin: 0 auto;
+  /* border: 1px solid red; */
   width: 18rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow2);
+  background-color: var(--el-color);
+}
+
+.country-card-image {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .country-info {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 1rem 1.5rem 2rem 1.5rem;
   background-color: var(--el-color);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
