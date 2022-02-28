@@ -1,5 +1,10 @@
+import { useState } from "react"
+
 
 function Nav ({ input, getInput }) {
+  const [filteredCountry, setFilteredCountry] = useState('')
+  console.log(filteredCountry)
+
   return (
     <nav className="navigation">
       <SearchBar
@@ -10,17 +15,8 @@ function Nav ({ input, getInput }) {
         getInput={getInput}
       />
 
-      <label htmlFor="countries-filter" id="country-filter">Filter by Country</label>
-      <div className="select-parent">
-        <select name="countries" id="countries-filter"> 
-          <option value="">Filter by Region </option>
-          <option value="Africa">Africa</option>
-          <option value="America">America</option>
-          <option value="Asia">Asia</option>
-          <option value="Europe">Europe</option>
-          <option value="Oceania">Oceania</option>
-        </select>
-        </div>
+      <ContinentFilter filteredCountry={filteredCountry} setFilteredCountry={setFilteredCountry}/>
+      
     </nav>
   )
 }
@@ -33,5 +29,23 @@ function SearchBar ({ name, id, placeholder, input, getInput }) {
     </div>
   )
 }
+
+function ContinentFilter ({ filteredCountry, setFilteredCountry }) {
+  return (
+    <>
+    <label htmlFor="countries-filter" id="country-filter">Filter by Continent</label>
+        <div className="select-parent">
+          <select name="countries" id="countries-filter" value={filteredCountry} onChange={e => setFilteredCountry(e.target.value)}> 
+            <option value="">Filter by Region </option>
+            <option value="Africa">Africa</option>
+            <option value="America">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+        </div>
+      </>
+  )
+} 
 
 export default Nav
