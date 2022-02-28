@@ -21,6 +21,7 @@ function App() {
         const data = response.data
         //get the first six object
         setCountries(data)
+        console.log(countries)
         setIsPending(false)
       } catch (error) {
         console.error('An Error occured:', error)
@@ -37,9 +38,11 @@ function App() {
   //search API data
   function searchItems(searchValue) {
     setInput(searchValue)
+    console.log(searchValue)
     if (setInput !== '') {
       const filteredData = countries.filter((item) => {
-        return Object.values(item)
+        console.log(item);
+        return Object.values(item.name.common)
           .join('')
           .toLowerCase()
           .includes(input.toLowerCase())
