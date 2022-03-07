@@ -14,7 +14,7 @@ function Nav ({ input, getInput }) {
         getInput={getInput}
       />
 
-      <ContinentFilter filteredCountry={filteredCountry} setFilteredCountry={setFilteredCountry}/>
+      <ContinentFilter/>
       
     </nav>
   )
@@ -29,20 +29,26 @@ function SearchBar ({ name, id, placeholder, input, getInput }) {
   )
 }
 
-function ContinentFilter ({ filteredCountry, setFilteredCountry }) {
+function ContinentFilter () {
+  const [country, setCountry] = useState('')
+
+  const getCountry = (e) => {
+    setCountry(e.target.value)
+    console.log(e.target.value)
+  }
   return (
     <>
-    <label htmlFor="countries-filter" id="country-filter">Filter by Continent</label>
-        <div className="select-parent">
-          <select name="countries" id="countries-filter" value={filteredCountry} onChange={e => setFilteredCountry(e.target.value)}> 
-            <option value="">Filter by Region </option>
-            <option value="Africa">Africa</option>
-            <option value="America">America</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Oceania">Oceania</option>
-          </select>
-        </div>
+      <label htmlFor="countries-filter" id="country-filter">Filter by Continent</label>
+          <div className="select-parent">
+            <select name="countries" id="countries-filter" value={country} onChange={e => getCountry(e)}> 
+              <option value="">Filter by Region </option>
+              <option value="Africa">Africa</option>
+              <option value="America">America</option>
+              <option value="Asia">Asia</option>
+              <option value="Europe">Europe</option>
+              <option value="Oceania">Oceania</option>
+            </select>
+          </div>
       </>
   )
 } 
