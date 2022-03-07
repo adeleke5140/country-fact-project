@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Nav from './components/Nav'
 import CountryList from './components/CountryList'
 import Loader from './components/Loader'
+import useLocalStorage from "use-local-storage"
 
 function App() {
   const [countries, setCountries] = useState(null)
@@ -21,7 +22,6 @@ function App() {
         const data = response.data
         //get the first six object
         setCountries(data)
-        console.log(countries)
         setIsPending(false)
       } catch (error) {
         console.error('An Error occured:', error)
@@ -53,9 +53,18 @@ function App() {
     }
   }
 
+  //dark mode toggling for the app
+  const defaultDark = window.matchMedia('(prefers-color-scheme:dark)').matches;
+  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? "dark" : 'light');
+
+  const switchTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light'
+    setTheme(newTheme)
+  }
+
   return (
-    <div className="App">
-      <Header />
+    <div className="App" data-theme={theme}>
+      <Header theme={theme} switchTheme={switchTheme}/>
       <Nav input={input} getInput={searchItems} />
       {isPending && <Loader />}
       {countries && (
