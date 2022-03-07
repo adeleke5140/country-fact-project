@@ -3,7 +3,6 @@ import { useState } from "react"
 
 function Nav ({ input, getInput }) {
   const [filteredCountry, setFilteredCountry] = useState('')
-  console.log(filteredCountry)
 
   return (
     <nav className="navigation">
