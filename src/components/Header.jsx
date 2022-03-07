@@ -1,4 +1,6 @@
-
+import useSound from "use-sound"
+import lightOn from "../assets/audio/audio_light-on.mp3"
+import lightOff from "../assets/audio/audio_light-off.mp3"
 
 function Header ({ theme, switchTheme }) {
   return (
@@ -23,10 +25,12 @@ function Button ({ theme, switchTheme }) {
 
   return (
     <button className="toggle-theme" role="switch" aria-label="light/dark mode" onClick={switchTheme}>
-        {theme === 'light' ? moon : sun}
+      {theme === 'light' ? moon : sun}
         <span className="toggle-theme-text">{ theme === 'light' ? 'Dark' : 'Light'} Mode</span>
     </button>
   )
 }
+
+
 
 export default Header
