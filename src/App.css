@@ -131,7 +131,9 @@ select {
   color: var(--text);
   opacity: var(--opacity);
   opacity: 1;
+  position: relative;
 }
+
 
 .country-card-list {
   display: flex;
@@ -153,13 +155,17 @@ select {
   border-radius: 10px;
   box-shadow: var(--box-shadow2);
   background-color: var(--el-color);
+  height: 360px;
 }
 
-.country-info > * {
+.country-info>* {
   color: var(--text);
 }
 
 .country-card-image {
+  width: 288px;
+  height: 144px;
+  object-fit: cover;
   border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
@@ -175,4 +181,61 @@ select {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+@media (min-width: 600px) {
+
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .App {
+    width: 100vw;
+  }
+
+  .header {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+  }
+
+  .header__title {
+    font-size: 1.5rem;
+  }
+
+  .toggle-theme-text {
+    font-weight: bold;
+  }
+
+  .navigation {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  input[type="search"] {
+    width: 60%;
+  }
+
+  .country-card-list {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    flex-direction: row;
+    gap: 85px;
+  }
+
+  .select-parent::after {
+    left: 80%;
+  }
+
+  select {
+    width: 22%;
+    position: relative;
+    left: 61%;
+  }
+
 }
