@@ -1,27 +1,40 @@
 import { useState } from 'react'
 
-function CountryList({ countries, filteredCountry, input }) {
-  const firstSixCountries = countries.slice(0, 6)
+function CountryList({
+  countries,
+  filteredCountry,
+  filteredContinent,
+  input,
+  continent,
+}) {
+  console.log(filteredContinent)
+  const firstEightCountries = countries.slice(15, -10)
   return (
     <main>
       <ul className="country-card-list">
         {input.length > 1
           ? filteredCountry.map((country) => (
-             <li key={country.area + '/' + country.name.common}>
-               <CountryCard country={country} />
-             </li>
-          ))
-          : firstSixCountries.map((country) => (
-             <li key={country.area + '/' + country.name.common}>
+              <li key={country.area + '/' + country.name.common}>
                 <CountryCard country={country} />
-             </li>
-            ))}
+              </li>
+            ))
+          : continent !== '' && continent.length > 1 
+          ? filteredContinent.map((country) => (
+              <li key={Math.random() + '/' + country.name}>
+                <CountryCard country={country} />
+              </li>
+            ))
+          : continent === '' && input.length < 1 ? firstEightCountries.map((country) => (
+              <li key={country.area + '/' + country.name.common}>
+                <CountryCard country={country} />
+              </li>
+          )) : null}
       </ul>
     </main>
   )
 }
 
-function CountryCard ({ country }) {
+function CountryCard({ country }) {
   return (
     <div className="country-card">
       <CountryImage img={country.flags} />
