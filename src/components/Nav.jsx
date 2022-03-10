@@ -1,8 +1,6 @@
 import { useState } from 'react'
 
-function Nav({ input, getInput, country, getCountry }) {
-  const [filteredCountry, setFilteredCountry] = useState('')
-
+function Nav({ input, getInput, continent, getCountry }) {
   return (
     <nav className="navigation">
       <SearchBar
