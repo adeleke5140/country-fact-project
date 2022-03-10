@@ -11,7 +11,7 @@ function Nav({ input, getInput, continent, getCountry }) {
         getInput={getInput}
       />
 
-      <ContinentFilter country={country} getCountry={getCountry} />
+      <ContinentFilter country={continent} getCountry={getCountry} />
     </nav>
   )
 }
