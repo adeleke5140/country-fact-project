@@ -183,6 +183,27 @@ select {
   width: 100%;
 }
 
+.cardInfo {
+  padding-top: 2rem;
+  padding-left: 1rem;
+}
+
+.return-button {
+  box-shadow: var(--box-shadow2);
+  padding: .3rem .4rem .3rem 1.2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 4rem;
+}
+
+.return-button__text {
+  color: var(--text);
+}
+
+
+/* for cardInfo section */
+
 @media (min-width: 600px) {
 
   body {

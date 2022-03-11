@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import CountryImage from './CountryImage'
+import CountryInfo from './CountryInfo'
 
 function CountryList({
   countries,
@@ -7,7 +9,6 @@ function CountryList({
   input,
   continent,
 }) {
-  console.log(filteredContinent)
   const firstEightCountries = countries.slice(15, -10)
   return (
     <main>
@@ -18,59 +19,36 @@ function CountryList({
                 <CountryCard country={country} />
               </li>
             ))
-          : continent !== '' && continent.length > 1 
+          : continent !== '' && continent.length > 1
           ? filteredContinent.map((country) => (
               <li key={Math.random() + '/' + country.name}>
                 <CountryCard country={country} />
               </li>
             ))
-          : continent === '' && input.length < 1 ? firstEightCountries.map((country) => (
+          : continent === '' && input.length < 1
+          ? firstEightCountries.map((country) => (
               <li key={country.area + '/' + country.name.common}>
                 <CountryCard country={country} />
               </li>
-          )) : null}
+            ))
+          : null}
       </ul>
     </main>
   )
 }
 
 function CountryCard({ country }) {
+  const navigate = useNavigate()
+  function showMoreInfo() {
+    navigate('/cardInfo', { state: country })
+  }
   return (
-    <div className="country-card">
-      <CountryImage img={country.flags} />
-      <CountryInfo country={country} />
-    </div>
-  )
-}
-
-function CountryImage({ img }) {
-  return (
-    <img
-      src={img.svg}
-      alt="a flag of a country"
-      className="country-card-image"
-    />
-  )
-}
-
-function CountryInfo({ country }) {
-  let countryPopulation = country.population
-    .toString()
-    .replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,')
-
-  return (
-    <div className="country-info">
-      <h2 className="country-name"> {country.name.common}</h2>
-      <p className="country-population">
-        <b>Population:</b> {countryPopulation}
-      </p>
-      <p className="country-region">
-        <b>Region:</b> {country.region}
-      </p>
-      <p className="country-capital">
-        <b>Capital:</b> {country.capital}
-      </p>
-    </div>
+    <>
+      <div className="country-card" onClick={showMoreInfo}>
+        <CountryImage img={country.flags} />
+        <CountryInfo country={country} />
+      </div>
+    </>
   )
 }
 
