@@ -21,6 +21,7 @@ export default function Home() {
         const data = response.data
         //get the first six object
         setCountries(data)
+        console.log(data)
         setIsPending(false)
       } catch (error) {
         console.error('An Error occured:', error)
