@@ -1,5 +1,6 @@
 import React from 'react'
 import '../App.css'
+import { Link } from 'react-router-dom'
 
 export default function ReturnButton({ buttonText, theme }) {
   const darkArrow = (
@@ -27,9 +28,11 @@ export default function ReturnButton({ buttonText, theme }) {
     </svg>
   )
   return (
-    <div className="return-button">
-      {theme === 'light' ? darkArrow : lightArrow}
-      <span className="return-button__text">{buttonText}</span>
-    </div>
+    <Link to="/" style={{ textDecoration: 'none' }}>
+      <div className="return-button">
+        {theme === 'light' ? darkArrow : lightArrow}
+        <span className="return-button__text">{buttonText}</span>
+      </div>
+    </Link>
   )
 }
