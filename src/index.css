@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   padding: 0;
@@ -82,23 +81,23 @@ img {
 }
 
 [data-theme="dark"] {
-     --text: var(--dark--mode-text);
-     --input: var(--dark-mode-input);
-     --bg: var(--dark-mode-bg);
-     --el-color: var(--dark-mode-el-color);
-     --box-shadow1: var(--dark--bs--header);
-     --box-shadow2: var(--dark--bs--nav);
-     --opacity: 1;
-     --arrow: url(./assets/arrow-dark.svg);
+  --text: var(--dark--mode-text);
+  --input: var(--dark-mode-input);
+  --bg: var(--dark-mode-bg);
+  --el-color: var(--dark-mode-el-color);
+  --box-shadow1: var(--dark--bs--header);
+  --box-shadow2: var(--dark--bs--nav);
+  --opacity: 1;
+  --arrow: url(./assets/arrow-dark.svg);
 }
 
-[data-theme="light"]{
-      --text: var(--light-mode-text);
-      --input: var(--light-mode-input);
-      --bg: var(--light-mode-bg);
-      --el-color: var(--light-mode-el-color);
-      --box-shadow1: var(--light-bs-header);
-      --box-shadow2: var(--light-bs-nav);
-      --opacity: 0.5;
-      --arrow: url(./assets/arrow.svg);
+[data-theme="light"] {
+  --text: var(--light-mode-text);
+  --input: var(--light-mode-input);
+  --bg: var(--light-mode-bg);
+  --el-color: var(--light-mode-el-color);
+  --box-shadow1: var(--light-bs-header);
+  --box-shadow2: var(--light-bs-nav);
+  --opacity: 0.5;
+  --arrow: url(./assets/arrow.svg);
 }
