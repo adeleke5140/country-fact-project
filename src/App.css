@@ -3,6 +3,7 @@
   height: 100%;
   transition: color 0.5s;
   height: 100vh;
+  overflow: hidden;
 }
 
 .header {
@@ -162,6 +163,10 @@ select {
   color: var(--text);
 }
 
+.title {
+  font-weight: 600;
+}
+
 .country-card-image {
   width: 288px;
   height: 144px;
@@ -185,7 +190,8 @@ select {
 
 .cardInfo {
   padding-top: 2rem;
-  padding-left: 1rem;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .return-button {
@@ -195,12 +201,28 @@ select {
   justify-content: flex-start;
   align-items: center;
   width: 4rem;
+  margin-left: 1.5rem;
 }
 
 .return-button__text {
   color: var(--text);
 }
 
+.country-details {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardInfo .country-card-image {
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: unset;
+  height: auto;
+  width: 87%;
+}
 
 /* for cardInfo section */
 
