@@ -12,4 +12,4 @@ The site below is a responsive web app. It shows you information about countries
 There is also a dark theme toggle if you prefer dark themes -- this was really fun to make.
 
 Check it out below:
-(Live Demo)[https://country-fact.netlify.app/]
+[Live Demo](https://country-fact.netlify.app/)
