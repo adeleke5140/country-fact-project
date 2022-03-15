@@ -51,7 +51,7 @@ export default function Home({ countries, isPending }) {
   }, [continent])
 
   return (
-    <>
+    <div className="home">
       <Nav
         input={input}
         getInput={searchItems}
@@ -68,6 +68,6 @@ export default function Home({ countries, isPending }) {
           continent={continent}
         />
       )}
-    </>
+    </div>
   )
 }
