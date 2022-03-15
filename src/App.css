@@ -320,4 +320,48 @@ select {
     left: 61%;
   }
 
+  .return-button {
+    margin-left: 4rem;
+  }
+
+  .country-details {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100vh;
+    margin-left: .1em;
+  }
+
+  .cardInfo .country-card-image {
+    height: 25rem;
+    width: 0;
+    margin-right: 7rem;
+    padding-left: 0;
+    flex-basis: 36%;
+  }
+
+  .sections-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .country-info-text {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .text-section-one {
+    margin-right: 8rem;
+
+  }
+
+  .text-section-two {
+    margin-right: 10em;
+  }
+
+  .border-list {
+    left: 5.8em;
+    bottom: 2.4em;
+  }
+
 }
