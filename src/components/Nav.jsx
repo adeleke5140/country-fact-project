@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 function Nav({ input, getInput, continent, getCountry }) {
   return (
     <nav className="navigation">

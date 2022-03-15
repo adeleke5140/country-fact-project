@@ -1,9 +1,7 @@
 .App {
   background-color: var(--bg);
-  height: 100%;
-  transition: color 0.5s;
   height: 100vh;
-  overflow: hidden;
+  transition: color 0.5s;
 }
 
 .header {
@@ -201,7 +199,8 @@ select {
   justify-content: flex-start;
   align-items: center;
   width: 4rem;
-  margin-left: 1.5rem;
+  margin-left: 1.2rem;
+  background-color: var(--el-color);
 }
 
 .return-button__text {
@@ -213,15 +212,37 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .cardInfo .country-card-image {
   margin-left: 0;
   margin-right: 0;
   border-radius: unset;
-  height: auto;
+  height: 16em;
+  padding-left: 1.5em;
   width: 87%;
+}
+
+.country-info-text {
+  align-self: flex-start;
+  padding-left: 1.5rem;
+}
+
+.text-section-one {
+  margin-top: 2.2rem;
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.country-info-text>* {
+  color: var(--text);
+}
+
+.border-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  list-style: none;
 }
 
 /* for cardInfo section */

@@ -4,36 +4,11 @@ import CountryList from '../components/CountryList'
 import { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 
-export default function Home() {
-  const [countries, setCountries] = useState(null)
-  const [isPending, setIsPending] = useState(true)
+export default function Home({ countries, isPending }) {
   const [input, setInput] = useState('')
   const [filteredCountry, setFilteredCountry] = useState([])
   const [continent, setContinent] = useState('')
   const [filteredContinent, setFilteredContinent] = useState([])
-
-  let isActive = true
-
-  useEffect(() => {
-    async function getCountries() {
-      try {
-        const response = await axios.get('https://restcountries.com/v3.1/all')
-        const data = response.data
-        //get the first six object
-        setCountries(data)
-        console.log(data)
-        setIsPending(false)
-      } catch (error) {
-        console.error('An Error occured:', error)
-      }
-    }
-
-    if (isActive) {
-      getCountries()
-    }
-
-    ;() => (isActive = false)
-  }, [])
 
   //search API data
   function searchItems(searchValue) {
@@ -74,6 +49,7 @@ export default function Home() {
       setFilteredContinent(countries)
     }
   }, [continent])
+
   return (
     <>
       <Nav

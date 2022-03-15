@@ -10,7 +10,6 @@ body {
   font-size: 87.5%;
   font-family: var(--ff);
   color: var(--text);
-  background-color: var(--bg);
 }
 
 code {
