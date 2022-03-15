@@ -1,6 +1,5 @@
 .App {
   background-color: var(--bg);
-  height: 100vh;
   transition: color 0.5s;
 }
 
@@ -16,8 +15,13 @@
   color: var(--text);
 }
 
+.home {
+  height: 100vh;
+}
+
 main {
   background-color: var(--bg);
+  height: 100vh;
 }
 
 .header__title {
@@ -238,11 +242,25 @@ select {
   color: var(--text);
 }
 
+.text-section-three {
+  margin-top: 2.5rem;
+}
+
 .border-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
   list-style: none;
+  position: relative;
+  left: -2.8em;
+}
+
+.border-list li {
+  background: var(--el-color);
+  box-shadow: var(--box-shadow2);
+  padding: .3em 1.5em;
+  font-size: .7rem;
+  margin-right: .5rem;
 }
 
 /* for cardInfo section */
