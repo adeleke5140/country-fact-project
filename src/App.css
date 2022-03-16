@@ -244,6 +244,7 @@ select {
 
 .text-section-three {
   margin-top: 2.5rem;
+  color: var(--text);
 }
 
 .border-list {
@@ -253,6 +254,7 @@ select {
   list-style: none;
   position: relative;
   left: -2.8em;
+  color: var(--text);
 }
 
 .border-list li {
@@ -362,6 +364,7 @@ select {
   .border-list {
     left: 5.8em;
     bottom: 2.4em;
+    color: var(--text);
   }
 
 }
