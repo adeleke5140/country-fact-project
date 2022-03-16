@@ -16,3 +16,11 @@ Check it out below hosted through Netlify.
 
 It is also available on swarm decentralised storage through the ethswarm gatheway
 [Live on Swarm](https://bah5acgzauwjg4hrcq6kwyfqwotz76bydgowyywebbrobdn4za5w4id7m4yda.bzz.link/)
+
+## Local installation
+
+To install this locally,
+
+1. Clone the repo or download the zip file
+2. Run `yarn install`
+3. Run `yarn dev` to serve locally.
