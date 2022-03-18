@@ -1,7 +1,5 @@
 # country-fact-project
 
-This is just a basic readme file I will update as soon as I commit my Latest changes.
-
 ## Intro
 
 I am currently reading Pure React by Dave and it's a wonderful book. This is in addition to taking the 8hrs Net Ninja's React Crash course. These two resources are very good, but something wasn't complete. I felt that I needed to build something. Something from scratch utilizing all I had learned. State, props, hooks, propTypes, e.t.c
