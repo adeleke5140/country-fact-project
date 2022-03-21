@@ -11,7 +11,6 @@
   padding: 1.8rem 1rem;
   border-bottom: 1px solid var(--bg);
   box-shadow: var(--box-shadow1);
-  /* margin-bottom: 2rem; */
   color: var(--text);
 }
 
@@ -247,6 +246,10 @@ select {
   color: var(--text);
 }
 
+.border-section {
+  margin-left: 1.5em;
+}
+
 .border-list {
   display: flex;
   justify-content: flex-start;
@@ -266,7 +269,7 @@ select {
 }
 
 /* for cardInfo section */
-
+/* this should be the media query for desktop devices but I am gonna add a slight modifications for tablet */
 @media (min-width: 600px) {
 
   body {
@@ -303,6 +306,10 @@ select {
 
   input[type="search"] {
     width: 60%;
+  }
+
+  .country-details {
+    padding-left: 1rem;
   }
 
   .country-card-list {
@@ -367,4 +374,31 @@ select {
     color: var(--text);
   }
 
+}
+
+@media(min-width: 600px) and (max-width: 1282px) {
+  .country-details .country-card-image {
+    margin-right: 2rem;
+    flex-basis: auto;
+    height: 31%;
+    padding-left: 0;
+    width: 46%
+  }
+
+  .select-parent::after {
+    left: 62%;
+  }
+
+  select#countries-filter {
+    width: 39%;
+    left: 28%;
+  }
+
+  .text-section-one {
+    margin-right: 3rem;
+  }
+
+  .text-section-two {
+    margin-right: 2rem;
+  }
 }
